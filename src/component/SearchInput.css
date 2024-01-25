@@ -1,0 +1,23 @@
+.search-filter-input {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+  }
+  
+  .search-input {
+    padding: 8px 12px 8px 25px; /* Adjust padding as needed */
+    border: 1px solid #9F9F9F;
+    border-radius: 15px;
+    left: 15px;
+    margin-left: 15px;
+    outline: none;
+  }
+  
+  .search-icon {
+    position: absolute;
+    left: 22px; /* Adjust left position as needed */
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888; /* Adjust color as needed */
+  }
+  

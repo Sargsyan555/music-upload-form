@@ -1,0 +1,46 @@
+.song-list{
+    display: flex;
+    justify-content: center;
+}
+.song-list table{
+    border-collapse: collapse;
+    width: 91%;
+    margin-top: 25px;
+}
+.song-list table thead{
+    background-color: #EEEEEE;
+}
+.song-list table tr th{
+    padding: 8px 20px;
+    border-right: 1px solid #FAFAFA;
+    text-align: start;
+}
+.song-list table tr th{
+    padding: 8px 20x;
+}
+.song-list table tbody tr{
+    border-bottom: 2px solid #EEEEEE;
+    text-align: start;
+
+}
+.song-list table tr td{
+    padding: 8px 20px;
+}
+.song-list table tr td .play-part{
+    display: flex;
+    align-items: center;
+}
+.song-list table .icons svg{
+    padding: 0px 15px 0px 0px;
+}
+/* Your existing styles for song rows */
+.song-row {
+    /* Add your regular styles for song rows here */
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Hover effect styles */
+  .song-row:hover {
+    background-color: #f0f0f0; /* Change the background color on hover */
+  }
+  

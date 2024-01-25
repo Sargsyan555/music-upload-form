@@ -1,0 +1,20 @@
+.musicPlayer .nav{
+    margin: auto;
+    margin-top: 80px;
+    width: 90%;
+    background-color: #EBEBEB;
+    display: flex;
+    padding: 5px;
+    border: 1px solid #B9B9B9;
+    justify-content: space-between;
+    border-radius: 8px;
+
+}
+.add_play_buttons{
+    display: flex;
+}
+.queue_and_filter{
+  display: flex;
+}
+
+ 
