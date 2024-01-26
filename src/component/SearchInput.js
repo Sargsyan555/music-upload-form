@@ -1,7 +1,7 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
-import './SearchInput.css'
+import '../style/SearchInput.css'
 export default function SearchInput() {
   return (
      <div className="search-filter-input">

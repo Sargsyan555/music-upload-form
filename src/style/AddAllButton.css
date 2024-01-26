@@ -1,25 +1,22 @@
-.track-numbers{
+  .add-all-button{
     display: flex;
     background-color: #F0F0F0;
     align-items: center;
     border: 1px solid #B9B9B9;
-    padding: 5px;
     border-radius: 3px;
     margin: 0 7px;
     padding: 0;
     height: 30px;
+    cursor: pointer;
   }
-  .track-numbers button{
+  .add-all-button button{
     border: none;
     background: none;
   }
-  .track-numbers .separator {
+  .add-all-button  .separator {
     width: 1px; 
     height: 30px; 
     background-color: #B9B9B9; 
     margin: 0 ;
-  }
-  .track-numbers .dropdown-arrow{
-    border-right: block;
   }
   

@@ -3,7 +3,6 @@
   background-color: #F0F0F0;
   align-items: center;
   border: 1px solid #B9B9B9;
-  padding: 5px;
   border-radius: 3px;
   margin: 0 7px;
   padding: 0;
@@ -21,4 +20,7 @@
 }
 .add-all-button .dropdown-arrow{
   border-right: block;
+}
+.play-all-button svg{
+  width: 10px;
 }

@@ -1,31 +1,34 @@
 import React, { useState } from 'react';
-import './PlayAllButton.css'
+import '../style/PlayAllButton.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlay, faPause } from '@fortawesome/free-solid-svg-icons';
+import { useSelector, useDispatch } from 'react-redux';
+import { playAllSong } from '../redux/action';
 
 
 const PlayAllButton = () => {
-  const [isPlaying, setIsPlaying] = useState(false);
+  const songs = useSelector((state) => state.songs.songs);
+  const dispatch = useDispatch();
+  const whichIsPlay = useSelector((state) => state.whichIsPlay); //
 
-  const toggleExpanded = () => {
-    
-    setIsPlaying(!isPlaying);
-    console.log('All songs is playing');
-    //Here can will logic which we can use for playing all songs
+  const handlePlay = () => {
+    dispatch(playAllSong(whichIsPlay)); 
+    //here the action is done so that when the user clicks play all all the songs are played
   };
   const handleDropdownClick = (e) => {
     // Prevent the click event from reaching the button
     e.stopPropagation();
-    // Add your logic for the dropdown click here
+    // We can add logic for the dropdown click here
     console.log('Dropdown clicked');
   };
     return (
         
           <div className="play-all-button">
-            <button onClick={toggleExpanded}>
+            <button onClick={handlePlay}>
               <div className="button-content">
-                  <FontAwesomeIcon icon={isPlaying ? faPause : faPlay} />
+                  <FontAwesomeIcon icon={whichIsPlay === 'play_all' ?  faPause: faPlay } />
                   <span> Play All</span>
+                  
               </div>
             </button>
             <div className='separator'></div>

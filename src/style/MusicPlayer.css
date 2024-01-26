@@ -1,31 +1,44 @@
-.music-player-container {
+.musicPlayer .nav{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    margin-top: 80px;
+    padding: 5px;
+    border: 1px solid #B9B9B9;
+    border-radius: 8px;
+    background-color: #EBEBEB;
+}
+.add_play_buttons{
+    display: flex;
+}
+.queue_and_filter{
+  display: flex;
+}
+@media screen and (max-width: 700px) {
+  /* Adjustments for smaller phone devices */
+  .musicPlayer .nav{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px;
   }
-  
-  .controls button {
-    background: none;
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
+  .musicPlayer .nav .add_play_buttons{
+    margin: 10px 0;
   }
+  .musicPlayer .nav .queue_and_filter  {
+    margin: 10px 0;
+  }
+
+}
+@media screen and (max-width: 450px) {
+  /* Adjustments for smaller phone devices */
   
-  .upload-form {
-    margin-top: 20px;
+  .musicPlayer .nav .queue_and_filter  {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    
   }
-  
-  .upload-form label {
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-  }
-  
-  .upload-form input {
-    display: none;
-  }
-  
+
+}
+
+ 

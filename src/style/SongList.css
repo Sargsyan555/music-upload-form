@@ -43,4 +43,18 @@
   .song-row:hover {
     background-color: #f0f0f0; /* Change the background color on hover */
   }
+  .song-row svg{
+    width: 15px;
+  } 
+  @media screen and (max-width: 600px) {
+    .artistName{
+      display: none;
+    }
+    .icons{
+        display: none;
+      }
+      .trackNumber{
+        display: none;
+      }
+  }
   

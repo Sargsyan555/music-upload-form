@@ -1,38 +1,26 @@
+//Shows a list of songs that are either pre-existing or downloaded by the user
 import React from 'react'
-import { useState } from 'react';
 import SongRow from './SongRow';
-import './SongList.css'
-export default function SongList() {
-    class SongModel {
-        constructor(songName, artistName, trackNumber = 2, file = null) {
-          this.songName = songName;
-          this.artistName = artistName;
-          this.trackNumber = trackNumber;
-          this.file = file;
-        }
-      }
-      const initialSongs = [
-        new SongModel('Song 1', 'Artist 1'),
-        new SongModel('Song 2', 'Artist 2'),
-        // Add more songs as needed
-      ];
-      const [songs, setSongs] = useState(initialSongs);
+import { useSelector } from 'react-redux';
+import '../style/SongList.css'
 
+export default function SongList() {
+  const songs = useSelector((state) => state.songs.songs); //
   return (
     <div className='song-list'>
         <table>
         <thead>
           <tr>
-            <th></th>
-            <th>Song Name</th>
-            <th>Artist Name</th>
-            <th>Track</th>
-            <th></th>
-
+            <th className='play'></th>
+            <th className='songName'>Song Name</th>
+            <th className='artistName'>Artist Name</th>
+            <th className='trackNumber'>Track</th>
+            <th className='icons'></th>
             {/* Additional header columns can be added here */}
           </tr>
         </thead>
         <tbody>
+          {/* shows the songs in rows */}
           {songs.map((song, index) => (
             <SongRow key={index} song={song} />
           ))}
